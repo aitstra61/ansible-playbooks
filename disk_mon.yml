@@ -1,0 +1,12 @@
+---
+# ansible playbook - do stuff in a play
+- name: Ensure all servers have monitoring synced
+#  gather_facts: false
+  hosts: multi
+  tasks: 
+  - copy: src="/home/vagrant/disk_info.sh"  dest="/home/vagrant/disk_mon.sh"
+# - shell: "chmod +x /home/vagrant/disk_mon.sh"
+  - file:
+      path: /home/vagrant/disk_mon.sh
+      mode: '0655'
+
