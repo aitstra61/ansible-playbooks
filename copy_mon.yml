@@ -1,0 +1,12 @@
+---
+# ansible playbook - do stuff in a play
+- name: Ensure book servers are synced
+#  gather_facts: false
+  hosts: multi
+  tasks: 
+  - copy: src="~/disk_info.sh"  dest="~/disk_mon.sh"
+  - shell: "chmod +x ~/disk_mon.sh"
+  - file:
+      path: ~/disk_mon.sh
+      mode: '0645'
+
