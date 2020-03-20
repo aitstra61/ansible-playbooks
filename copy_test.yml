@@ -13,6 +13,5 @@
     - name: Transfer example Node.js app from my mac to server.
       synchronize:
         src: /Users/vagrant/Public/app
-        dest: "{{ node_apps_location }}"
-        mode: pull
-      delegate_to: 192.168.60.20
+        dest: "{{ node_apps_location }}
+      delegate_to: 192.168.0.132
