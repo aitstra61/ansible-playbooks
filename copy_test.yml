@@ -15,4 +15,4 @@
         src: /Users/vagrant/Public/app
         dest: "{{ node_apps_location }}"
         mode: pull
-      deligate_to: awx.test
+      deligate_to: 192.168.60.20
