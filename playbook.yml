@@ -1,7 +1,0 @@
----
-# ansible playbook - do stuff in a play
-- name: Ensure book servers are synced
-  hosts: app
-  tasks: 
-  - copy: src="~/disk_mon.sh dest=."
-  - shell: "chmod +x disk_mon.sh"

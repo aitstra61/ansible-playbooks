@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: yes
+
+  vars:
+    node_apps_location: /usr/local/opt/node
+
+  tasks:
+
+    - name: Ensure Node.js app folder exists.
+      file: "path={{ node_apps_location }} state=directory"
+
+    - name: Transfer example Node.js app from my mac to server.
+      synchronize:
+        src: /Users/vagrant/Public/app
+        dest: "{{ node_apps_location }}"
+        mode: pull
+      deligate_to: awx.test
