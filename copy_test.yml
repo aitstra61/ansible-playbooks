@@ -12,7 +12,7 @@
 
     - name: Transfer example Node.js app from my mac to server.
       synchronize:
-        src: /Users/vagrant/Public/app/app.js
+        src: /home/vagrant/repo/nodejs/app
         dest: "{{ node_apps_location }}"
         mode: push
       delegate_to: 192.168.0.30
