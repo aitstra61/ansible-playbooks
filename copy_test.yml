@@ -15,5 +15,5 @@
         src: /Users/vagrant/Public/app/app.js
         dest: "{{ node_apps_location }}"
         mode: push
-      delegate_to: 192.168.0.132
+      delegate_to: 192.168.0.30
       
