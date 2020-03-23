@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: 192.168.60.20
   become: yes
 
   vars:
@@ -14,6 +14,6 @@
       synchronize:
         src: /Users/vagrant/Public/app/app.js
         dest: "{{ node_apps_location }}"
-        mode: pull
-      delegate_to: 192.168.60.20
+        mode: push
+      delegate_to: 192.168.0.132
       
