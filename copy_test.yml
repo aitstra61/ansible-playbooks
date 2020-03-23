@@ -12,7 +12,7 @@
 
     - name: Transfer example Node.js app from my mac to server.
       synchronize:
-        src: /repo/nodejs/app/nodejs_testfile
+        src: ~/repo/nodejs/app/nodejs_testfile
         dest: "{{ node_apps_location }}"
       delegate_to: 192.168.60.30
       
