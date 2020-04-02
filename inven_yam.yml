@@ -1,26 +1,36 @@
+
 all:
   hosts:
     mail.example.com:
   children:
     cpcctv:
       hosts:
-        192.168.0.120:
-        192.168.0.121:
-        192.168.0.122:
-        192.168.0.123:
+        pi1:
+          192.168.0.120:
+        pi2:
+          192.168.0.121:
+        pi3:
+          192.168.0.122:
+        pi4:
+          192.168.0.123:
     cpccvpn:
       hosts:
-        192.168.0.25:
+        pi_vpn:
+          192.168.0.25:
     sfamtv:
       hosts:
-        192.168.0.29:
+        pi_tv:
+          192.168.0.29:
     sfampi:
       hosts:
-        192.168.0.133:
-        192.168.0.28:
+        pi_workbench:
+          192.168.0.133:
+        pi_test:
+          192.168.0.28:
     sfamnvr:
       hosts:
-        192.168.0.21:
+        sfcam1:
+         192.168.0.21:
     sfam:
       children:
         sfamnvr:
@@ -30,27 +40,42 @@ all:
       children:
         cpcctv:
         cpccvpn:
-    nodejs:
+    web_test:
       hosts:
-        192.168.60.20:
-    nodejs1:
-      hosts:
-        192.168.55.55:
+        nodejs1:
+          192.168.55.55:
     solr:
       hosts:
-        192.168.66.66:
+        solr1:
+          192.168.66.66:
     drpal:
       hosts:
-        192.168.60.20:
-    nginx:
+        grpal1:
+          192.168.60.20:
+    awx_test:
       hosts:
-        192.168.60.20:
-    macair:
+        awx1:
+          ansible_host:
+            192.168.60.20:
+    web_ubuntu:
       hosts:
-        192.168.0.132:
+        duan-con-100:
+          ansible_host:
+            192.168.50.20:
+          ansible_port:
+            2221:
+        duan-con-101:
+          ansible_host:
+            192.168.50.30:
+          ansible_port:
+            2221:
+    mac:
+      hosts:
+        rs-mac-air:
+          ansible_host:
+            192.168.0.132:
     prod:
       hosts:
         foo.example.com:
         one.example.com:
         two.example.com:
-

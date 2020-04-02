@@ -1,0 +1,30 @@
+---
+ungrouped:
+  hosts:
+    mail.example.com:
+awx:
+  hosts:
+    awx1.dev:
+      ansible_host:         192.168.60.20
+jenkins:
+  hosts:
+    jen1.dev:
+      ansible_host:         192.168.60.30
+octopus:
+  hosts:
+    oct1.dev:
+      ansible_host:         192.168.60.40
+web_ubuntu:
+  hosts:
+    duan-con-100:
+      ansible_host:         192.168.50.20
+      ansible_port:         2221
+    duan-con-101:
+      ansible_host:         192.168.50.30
+      ansible_port:         2221
+web_centos:
+  hosts:
+    dcan-web-100:
+      ansible_host:         192.168.40.20
+    dcan-web-101:
+      ansible_host:         192.168.40.30
