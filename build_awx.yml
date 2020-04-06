@@ -1,7 +1,7 @@
 ---
-- name: Install docker
-  gather_facts: No
-  hosts: awx
+- name: Install AWX prerequisits and update configs
+  gather_facts: yes
+  hosts: awx1
   become: yes
 
   tasks:
@@ -61,4 +61,3 @@
         groups: docker
         append: yes
       become: yes
-      
